@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="Stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="Stylesheet" type="text/css" href="css/AllRequest.css" />
     <title>ALL REQUEST</title>
 </head>
+
 <body>
-    
+    <div class="form-logo">
+        <img src="images/eiteclogo.jpg" alt="" loading="lazy" />
+    </div>
+
+    <div class="titlebar">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h4>All requests</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid part-details">
+        <div class="row">
+            <div class="col">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Full name</th>
+                            <th>Department</th>
+                            <th>Date</th>
+                            <th> Supervisor's name</th>
+                            <th>Duration</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="allRequests"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>
