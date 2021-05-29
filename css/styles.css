@@ -1,3 +1,7 @@
+:root {
+  --color: #00184f;
+}
+
 .content {
   height: 80vh;
 }
@@ -5,8 +9,13 @@
 .images {
   height: 80vh;
 }
+
+.navbar {
+  padding: 0;
+}
+
 .footer {
-  background-color: #00184f;
+  background-color: var(--color);
   padding-top: 2rem;
   padding-bottom: 0px;
   color: white;
@@ -22,6 +31,47 @@
   top: 50%;
 }
 .btn {
-  background-color: #00184f;
-  border-color: #00184f;
+  background-color: var(--color);
+  border-color: var(--color);
+}
+
+/* Login page */
+.form-logo {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.form-logo img {
+  width: 120px;
+  height: auto;
+  object-fit: scale-down;
+}
+
+.login-form {
+  width: clamp(270px, 40%, 400px);
+  margin: auto;
+  padding: 1.5rem;
+  border: 1px solid #c4c4c4;
+  margin-top: 2vh;
+  border-radius: 10px;
+
+}
+
+.login-form button {
+  width: 100%;
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  padding: .5rem;
+  border-radius: 6px;
+  background-color: var(--color);
+  color: white;
+}
+
+footer.login {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
