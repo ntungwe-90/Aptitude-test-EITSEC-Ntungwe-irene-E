@@ -1,0 +1,57 @@
+.form-header {
+    margin: auto;
+    /* font-size:  */
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 40%;
+    min-width: 500px;
+}
+
+form section {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* form section p {
+    color: var(--color);
+    margin: 0 0 .5em;
+} */
+
+form section label {
+}
+
+form section input {
+    border: 1px solid grey;
+    outline: none;
+    width: 100%;
+    border-radius: 6px;
+    padding: .5rem;
+}
+
+form section input:focus {
+    border-color: var(--color);
+}
+
+form .leave-duration {
+
+}
+
+form .split-section {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+form button {
+    background-color: var(--color);
+    color: white;
+    border-radius: 6px;
+    padding: .5rem;
+}

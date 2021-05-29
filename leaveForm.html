@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="Stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="Stylesheet" type="text/css" href="css/leave-form.css" />
     <title>leave registration form</title>
 </head>
 
@@ -14,37 +15,56 @@
     <div class="form-logo">
         <img src="images/eiteclogo.jpg" alt="" loading="lazy" />
     </div>
-    <h1>EMPLOYEE LEAVE REQEUST FORM</h1>
-    <form action="" class="login-form">
-        
-        <label>full name</label>
-        <input type="text" placeholder="" name=""/>
-        <label>Date</label>
-        <input type="date" placeholder="" name=""/>
-        <label>Department</label>
-        <input type="text" placeholder="" name=""/>
-        <label>From</label>
-        <input type="text" placeholder="" name=""/>
-        <label>To</label>
-        <input type="text" placeholder="" name=""/>
+    <form >
+        <h3 class="form-header">EMPLOYEE LEAVE REQEUST FORM</h3>\
+        <section>
+            <label for="fullname">Full name</label>
+            <input type="text" placeholder="" name="fullname"/>
+        </section>
+        <section>
+            <label for="">Department</label>
+            <input type="text" placeholder="" name=""/>
+        </section>
+        <section>
+            <label for="">Date</label>
+            <input type="date" placeholder="" name=""/>
+        </section>
+        <section>
+            <label for="">Date</label>
+            <input type="text" placeholder="" name=""/>
+        </section>
 
-        <h3>Reasons for leave </h3>
-        <label>Vacation</label>
-        <input type="checkbox" placeholder="" name=""/>
-        <label>Sick</label>
-        <input type="checkbox" placeholder="" name=""/>
-        <label>leave of absence</label>
-        <input type="checkbox" placeholder="" name=""/>
-        <label>funeral</label>
-        <input type="checkbox" placeholder="" name=""/>
-        <label>maternity</label>
-        <input type="checkbox" placeholder="" name=""/>
-        <label>other</label>
-        <input type="text" placeholder="" name=""/>
+        <section class="leave-duration">
+            <p>Duration of leave</p>
+            <div class="split-section">
+                <div>
+                    <label for="">From</label>
+                    <input type="date" placeholder="" name=""/>
+                    
+                </div>
+                <div>
+                    <label for="">To</label>
+                    <input type="date" placeholder="" name=""/>
+                </div>
+            </div>
+        </section>
 
+        <p>Reasons for leave</p>
+        <section class="leave-reason">
 
-
-        
+            <!-- <select name='leave-type' aria-placeholder="Select leave type">
+                <option value="Vacation">Vacation</option>
+                <option value="Sick">Sick</option>
+                <option value="Leave of abscence">Leave of abscence</option>
+                <option value="Funeral">Funeral</option>
+                <option value="Maternity">Maternity</option>
+                <option value="Other">Other</option>
+            </select> -->
+        </section>
+        <!-- <section>
+            <label for=""></label>
+        </section> -->
+        <button type="submit">Request Leave</button>
     </form>
     <footer class="row footer login">
         <div class="container-fluid">
