@@ -66,6 +66,8 @@
   padding: .5rem;
   border-radius: 6px;
   background-color: var(--color);
+}
+.login-form button a {
   color: white;
 }
 
