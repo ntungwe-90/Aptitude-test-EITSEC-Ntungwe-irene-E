@@ -10,6 +10,7 @@ form {
     margin: auto;
     width: 40%;
     min-width: 500px;
+    margin-bottom: 2rem;
 }
 
 form section {
@@ -18,12 +19,15 @@ form section {
     flex-direction: column;
 }
 
-/* form section p {
+form section p {
     color: var(--color);
     margin: 0 0 .5em;
-} */
+}
 
 form section label {
+    color:grey;
+    margin-left: .5rem;
+    font-weight: 500;
 }
 
 form section input {
@@ -33,14 +37,26 @@ form section input {
     border-radius: 6px;
     padding: .5rem;
 }
-
-form section input:focus {
+form input:focus,
+form select:focus,
+form textarea{
     border-color: var(--color);
 }
 
-form .leave-duration {
-
+form textarea{
+    resize: vertical;
 }
+
+/* form section input:focus {
+
+    border-color: var(--color);
+} */
+
+form .leave-duration *:first-child{
+font-weight: 700;
+}
+
+
 
 form .split-section {
     display: grid;
@@ -54,4 +70,19 @@ form button {
     color: white;
     border-radius: 6px;
     padding: .5rem;
+    border:none;
+    margin-top: 1.5rem;
+}
+
+form button a,
+form button a:focus,
+form button a:hover{
+    color:#fff ;
+    text-decoration: none;
+}
+
+
+.footer{
+    position:static;
+    margin:3rem 0 0 0;
 }
