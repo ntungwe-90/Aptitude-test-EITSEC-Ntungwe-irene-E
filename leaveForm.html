@@ -12,7 +12,10 @@
 </head>
 
 <body>
-    <div class="form-logo">
+    <div class="form-logo" 
+    class="mx-auto d-block parts-form"
+    onsubmit="handleOrderRequest(event)"
+    >
         <img src="images/eiteclogo.jpg" alt="" loading="lazy" />
     </div>
     <form>
@@ -60,23 +63,79 @@
                 <option value="Maternity">Maternity</option>
                 <option value="Other">Other</option>
             </select>
+            
         </section>
         <section>
             <label for=""></label>
+           
         </section>
-        <button type="submit">
+        <button type="submit" class=" login">
             <a href="./feedback.html">Request Leave</a>
         </button>
+       
     </form>
-    <footer class="row footer login">
+    <!-- <footer class="row footer login">
         <div class="container-fluid">
             <p class="text-center">&copy;2021 EITSEC All Rights Reserved!</p>
         </div>
-    </footer>
+    </footer> -->
 
 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.6.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.6.4/firebase-analytics.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB2TMEjrV4K3uLpWHus1NIVCtQVRsU5VrQ",
+            authDomain: "eitsec-gh.firebaseapp.com",
+            projectId: "eitsec-gh",
+            storageBucket: "eitsec-gh.appspot.com",
+            messagingSenderId: "858024548040",
+            appId: "1:858024548040:web:3d26b0a8bb807fd294b7fd",
+            measurementId: "G-NCSNGERX19"
+        };
+    </script>
+
+<script>
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+
+    // Submit orders
+    const handleOrderRequest = (event) => {
+      event.preventDefault();
+      console.log("handle requests");
+      db.collection("orders")
+        .add({
+          fullName: event.target.fullName.value,
+          department: event.target.department.value,
+          date: event.target.date.value,
+          supervisorName: event.target.supervisorName.value,
+        duration: event.target.duration.value,
+         
+        })
+        .then(function (docRef) {
+          console.log("Document written with ID: ", docRef.id);
+          event.target.reset();
+          window.location.href = "order-success.html";
+        })
+        .catch(function (error) {
+          console.error("Error adding document: ", error);
+        });
+    };
+  </script>
 
 </body>
 

@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="Stylesheet" type="text/css" href="css/styles.css" />
+     <link rel="Stylesheet" type="text/css" href="css/styles.css" />
     <link rel="Stylesheet" type="text/css" href="css/AllRequest.css" />
+    <link rel="Stylesheet" type="text/css" href="css/gen.css" /> 
     <title>ALL REQUEST</title>
 </head>
 
@@ -25,6 +26,7 @@
             </div>
         </div>
     </div>
+    
 
     <div class="container-fluid part-details">
         <div class="row">
@@ -47,9 +49,81 @@
     </div>
 
 
+    <!-- <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script> -->
 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.3/umd/popper.min.js"
+    ></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="/__/firebase/8.6.4/firebase-app.js"></script>
+
+     <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="/__/firebase/8.6.4/firebase-analytics.js"></script>
+ 
+ 
+     <script>
+         // Your web app's Firebase configuration
+         var firebaseConfig = {
+             apiKey: "AIzaSyB2TMEjrV4K3uLpWHus1NIVCtQVRsU5VrQ",
+             authDomain: "eitsec-gh.firebaseapp.com",
+             projectId: "eitsec-gh",
+             storageBucket: "eitsec-gh.appspot.com",
+             messagingSenderId: "858024548040",
+             appId: "1:858024548040:web:3d26b0a8bb807fd294b7fd",
+             measurementId: "G-NCSNGERX19"
+         };
+     </script>
+ 
+ <script>
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     var db = firebase.firestore();
+
+     const getAllRequests = () => {
+        var allRequestsTable = document.getElementById("leaveForm");
+        db.collection("orders")
+          .get()
+          .then((querySnapshot) => {
+            allRequestsTable.innerHTML = "";
+            let index = 0;
+            querySnapshot.forEach((doc) => {
+              itemID = doc.id;
+              let data = doc.data();
+              index++;
+
+              let newRow = `
+              <tr>
+                <td>${data.fullName}</td>
+                <td>${data.department}</td>
+                <td>${data.date}</td>
+                <td>${data.supervisorName}</td>
+                <td>${data.duration}</td>
+
+                <td>
+                  <a href="leaveForm.html?id=${itemID}"
+                    ><button type="button" class="btn btn-secondary btn-sm">
+                      VIEW
+                    </button></a
+                  >
+                </td>
+              </tr>`;
+              allRequestsTable.innerHTML = allRequestsTable.innerHTML + newRow;
+            });
+          });
+      };
+
+      getAllRequests();
+    </script>
+ 
+
+    <!-- // <script src="js/jquery-3.5.1.min.js"></script> -->
+    <!-- // <script src="js/bootstrap.min.js"></script> -->
 </body>
 
 </html>

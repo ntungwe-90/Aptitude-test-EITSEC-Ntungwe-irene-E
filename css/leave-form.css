@@ -19,10 +19,10 @@ form section {
     flex-direction: column;
 }
 
-form section p {
+/* form section p {
     color: var(--color);
     margin: 0 0 .5em;
-}
+} */
 
 form section label {
     color:grey;
@@ -36,6 +36,13 @@ form section input {
     width: 100%;
     border-radius: 6px;
     padding: .5rem;
+}
+
+form select,
+form textarea{
+    padding: .5rem;
+    border-radius: 6px;
+    outline: none;
 }
 form input:focus,
 form select:focus,
@@ -52,7 +59,7 @@ form textarea{
     border-color: var(--color);
 } */
 
-form .leave-duration *:first-child{
+form .leave-duration > *:first-child{
 font-weight: 700;
 }
 
@@ -80,6 +87,8 @@ form button a:hover{
     color:#fff ;
     text-decoration: none;
 }
+
+
 
 
 .footer{

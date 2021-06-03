@@ -77,3 +77,9 @@ footer.login {
   left: 0;
   right: 0;
 }
+
+
+.modal-title-bar {
+  background-color: #00184f;
+  color: white;
+}
